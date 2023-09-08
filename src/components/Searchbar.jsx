@@ -1,6 +1,3 @@
-//import { useState } from "react";
-//import { data } from "../utils/data";
-//import { RecipeListPage } from "../pages/RecipeListPage";
 import { RecipeList } from "./RecipeList";
 import { SimpleGrid, Input } from "@chakra-ui/react";
 
@@ -8,8 +5,6 @@ export const Searchbar = ({ clickFn, recipes, setSearchField }) => {
   const onChange = (event) => {
     setSearchField(event.target.value);
   };
-
-  // console.log(recipes);
 
   return (
     <>
@@ -39,34 +34,3 @@ export const Searchbar = ({ clickFn, recipes, setSearchField }) => {
     </>
   );
 };
-
-//   const LabelArray = [];
-
-//   for (let i in RecipeArray) {
-//     LabelArray.push(RecipeArray[i].label);
-//     console.log(RecipeArray[i].label);
-//   }
-
-//   console.log(LabelArray);
-
-//   const matchedRecipes = RecipeArray.filter((recipe) => {
-//     return RecipeArray[recipe].label
-//       .toLowerCase()
-//       .includes(searchField.toLowerCase());
-//   });
-
-//   const matchedRecipes = data.hits[0].recipe.filter((name) => {
-//     return name.label.toLowerCase().includes(searchField.toLowerCase());
-//   });
-
-//   const handleChange = (event) => {
-//     setSearchField(event.target.value);
-//   };
-//   return (
-//     <>
-//       <label>Search for a recipe:</label>
-//       <TextInput changeFn={setSearchField} />
-//       <RecipeListPage clickFn={clickFn} item={matchedRecipes} />
-//     </>
-//   );
-// };
